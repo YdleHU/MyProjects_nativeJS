@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Josefin+Sans:ital@1&family=Kanit&family=Open+Sans:ital,wght@0,800;1,700&family=PT+Serif:wght@700&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Poppins:ital,wght@1,500&family=Quicksand:wght@500&family=Rubik:ital,wght@1,600&family=Smokum&family=The+Nautigal:wght@700&family=Tiro+Telugu:ital@1&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 9%, rgba(226, 73, 199, 1) 49%, rgba(0, 212, 255, 1) 100%);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    padding: 10px;
+    gap: 20px;
+}
+
+section {
+    background: #fff;
+    border-radius: 7px;
+}
+
+.tools-board {
+    width: 210px;
+    height: 750px;
+    padding: 15px 22px 0;
+}
+
+.tools-board .row {
+    margin-bottom: 20px;
+}
+
+.row .options {
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option:is(:hover, .active) img {
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.option :where(span, label) {
+    color: #5A6168;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.option:is(:hover, .active) :where(span, label) {
+    color: #4A9A83;
+}
+
+.optin #fill-color {
+    height: 14px;
+    width: 14px;
+}
+
+#fill-color:checked~label {
+    color: #4A9A83;
+}
+
+.option #size-slider {
+    width: 100%;
+    height: 10px;
+    margin-top: 10px;
+}
+
+.colors .options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors .option {
+    height: 20px;
+    width: 20px;
+    background: red;
+    border-radius: 50%;
+    margin-top: 5px;
+    position: relative;
+}
+
+.colors .option:nth-child(1) {
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+}
+
+.colors .option:nth-child(2) {
+    background-color: #000;
+}
+
+.colors .option:nth-child(3) {
+    background-color: #E02020;
+}
+
+.colors .option:nth-child(4) {
+    background-color: #6DD400;
+}
+
+.colors .option:nth-child(5) {
+    background-color: #4A9A83;
+}
+
+
+.colors .option.selected::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    height: 12px;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+}
+
+.colors .option:last-child.selected::before {
+    border-color: #ccc;
+}
+
+.option #color-picker {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.buttons button {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    margin-bottom: 13px;
+    font-size: 0.9rem;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons .clear-canvas {
+    color: #6C757D;
+    border: 1px solid #6C757D;
+    transition: all 0.3s ease;
+}
+
+.clear-canvas:hover {
+    color: #fff;
+    background: #6C757D;
+}
+
+.buttons .save-img {
+    color: #fff;
+    background: #4A9A83;
+    transition: 0.5s;
+}
+
+.save-img:hover {
+    color: #000;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+.drawing-board {
+    flex: 1;
+}
+
+.drawing-board canvas {
+    width: 100%;
+    height: 100%;
+}

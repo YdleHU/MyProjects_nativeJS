@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Josefin+Sans:ital@1&family=Kanit&family=Open+Sans:ital,wght@0,800;1,700&family=PT+Serif:wght@700&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Poppins:ital,wght@1,500&family=Quicksand:wght@500&family=Rubik:ital,wght@1,600&family=Smokum&family=The+Nautigal:wght@700&family=Tiro+Telugu:ital@1&family=Ubuntu:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 35px;
+    min-height: 100vh;
+    background: #343F4F;
+}
+
+.wrapper {
+    max-width: 1200px;
+    position: relative;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.2rem;
+    background: #fff;
+    transform: translateY(-50%);
+}
+
+.wrapper i:first-child {
+    left: -23px;
+    display: none;
+}
+
+.wrapper i:last-child {
+    right: -23px;
+}
+
+.wrapper .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.carousel.Dragging {
+    scroll-behavior: auto;
+    cursor: grab;
+}
+
+.carousel.Dragging img {
+    pointer-events: none;
+}
+
+.carousel img {
+    height: 340px;
+    object-fit: cover;
+    margin-left: 14px;
+    width: calc(100% / 3);
+}
+
+.carousel img:first-child {
+    margin-left: 0px;
+}
+
+
+/* --- TABLET --- */
+@media screen and (max-width: 900px) {
+    .carousel img {
+        width: calc(100% / 2);
+    }
+}
+
+/* --- MOBILE --- */
+@media screen and (max-width: 550px) {
+    .carousel img {
+        width: 100%;
+    }
+}

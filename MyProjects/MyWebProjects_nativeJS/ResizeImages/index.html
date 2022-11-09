@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize Images - Tóth Benjámin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="upload-box">
+            <img src="./images/upload.png" alt="Upload logo">
+            <p>Browse File to Upload</p>
+            <input type="file" accept="image/*" hidden>
+        </div>
+        <div class="content">
+            <div class="row sizes">
+                <div class="column width">
+                    <label for="">Width</label>
+                    <input type="number">
+                </div>
+                <div class="column height">
+                    <label for="">Height</label>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="row checkboxes">
+                <div class="column ratio">
+                    <input type="checkbox" id="ratio" checked>
+                    <label for="ratio">Lock aspect ratio</label>
+                </div>
+                <div class="column quality">
+                    <input type="checkbox" id="quality">
+                    <label for="quality">Reduce quality</label>
+                </div>
+            </div>
+            <button class="download-btn">Download Image</button>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
