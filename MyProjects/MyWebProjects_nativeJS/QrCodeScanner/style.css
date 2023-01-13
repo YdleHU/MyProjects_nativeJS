@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Josefin+Sans:ital@1&family=Kanit&family=Open+Sans:ital,wght@0,500;0,800;1,700&family=PT+Serif:wght@700&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Poppins:ital,wght@1,500&family=Quicksand:wght@500&family=Rubik:ital,wght@1,600&family=Smokum&family=The+Nautigal:wght@700&family=Tiro+Telugu:ital@1&family=Ubuntu:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #E3F2FD;
+}
+
+
+/* ----- WRAPPER ----- */
+.wrapper {
+    height: 300px;
+    width: 400px;
+    background: rgb(5, 0, 36);
+    background: linear-gradient(90deg, rgba(5, 0, 36, 1) 0%, rgba(169, 0, 255, 1) 100%, rgba(226, 73, 106, 1) 100%);
+    border-radius: 7px;
+    padding: 30px 30px 30px;
+}
+
+.wrapper.active {
+    height: 525px;
+}
+
+.wrapper form {
+    height: 240px;
+    background: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: height 0.3s ease;
+}
+
+
+/* ----- FORM ----- */
+.wrapper.active form {
+    height: 225px;
+    pointer-events: none;
+}
+
+form img {
+    display: none;
+    max-width: 200px;
+}
+
+.wrapper.active form img {
+    display: block;
+}
+
+.wrapper.active form .content {
+    display: none;
+}
+
+form .content {
+    /*display: none;*/
+}
+
+form .content i {
+    color: #0B85FF;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+form .content p {
+    font-size: 20px;
+    color: #000;
+    margin-top: 10px;
+}
+
+
+/* ----- DETAILS ----- */
+.wrapper .details {
+    margin-top: 25px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wrapper.active .details {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+.details textarea {
+    width: 100%;
+    height: 130px;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+
+/* ----- BUTTONS ----- */
+.details .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.buttons button {
+    height: 50px;
+    width: calc(100% / 2 - 10px);
+    color: #fff;
+    border-radius: 7px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.buttons button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
